@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Astronum — Historias que iluminan ideas." />
+    <title>Astronum</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%23090909'/%3E%3Ccircle cx='16' cy='16' r='8' fill='%2387176B'/%3E%3Ccircle cx='19' cy='13' r='5' fill='%2333BBFF' opacity='.8'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="home-page">
+    <main class="hero">
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="brand" href="#inicio" aria-label="Astronum, inicio">Astronum</a>
+        <div class="nav-links">
+          <a href="#historia" class="story-trigger">Nuestra Historia</a>
+          <a href="membership.html">Membresía</a>
+          <a href="#escribir" class="write-trigger">Escribir</a>
+        </div>
+        <div class="account-links">
+          <a class="register auth-trigger" data-mode="register" href="#registrar">Registrar</a>
+          <a class="button button--compact auth-trigger" data-mode="login" href="#ingresar">Ingresar <img src="assets/arrow-forward.svg" alt="" /></a>
+        </div>
+      </nav>
+
+      <section id="inicio" class="intro" aria-labelledby="hero-title">
+        <h1 id="hero-title"><strong>Historias</strong> que iluminan ideas</h1>
+        <p>Un espacio para leer, escribir y explorar nuevas formas de pensar.</p>
+          <a class="button" href="reading.html">Empezar a Leer</a>
+      </section>
+    </main>
+    <div class="overlay-modal story-modal" aria-hidden="true"><div class="story-panel"><button class="modal-close" aria-label="Cerrar">×</button><p class="eyebrow">Nuestra Historia</p><h2>Nacimos para darte historias que valgan la pena leer.</h2><p>Creemos que una buena idea puede cambiar la forma en que miras el mundo. Astronum reúne voces, preguntas y relatos para que siempre encuentres algo que te inspire.</p></div></div>
+    <div class="overlay-modal auth-modal" aria-hidden="true"><div class="auth-panel"><button class="modal-close" aria-label="Cerrar">×</button><div class="auth-form"><strong>Astronum</strong><h2 class="auth-title">Bienvenido</h2><p class="auth-subtitle">Ingresa a Astronum para empezar a leer</p><button class="social-login"><img src="assets/google.svg" alt="" />Ingresar con Google</button><button class="social-login"><img src="assets/apple.svg" alt="" />Ingresar con Apple</button><div class="or-line"><span></span>o<span></span></div><label>Correo Electrónico<input type="email" placeholder="Tu correo electrónico" /></label><label>Contraseña<input type="password" placeholder="Tu contraseña" /></label><button class="auth-submit">Ingresar <img src="assets/arrow-forward.svg" alt="" /></button></div><div class="auth-art"><p>+400 Historias. +150 Usuarios</p><small>Postea lo que piensas. Lo que Opinas</small><img src="assets/login-art.png" alt="" /></div></div></div>
+    <div class="toast" role="status" aria-live="polite">Próximamente...</div>
+    <script src="script.js"></script>
+  </body>
+</html>
