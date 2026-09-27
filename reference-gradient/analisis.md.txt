@@ -1,0 +1,153 @@
+# Análisis y reconstrucción del fondo animado
+
+## Referencia
+
+La carpeta `frames/` contiene fotogramas consecutivos extraídos del mismo video de referencia.
+
+Los archivos:
+
+* `frame_001.png`
+* `frame_002.png`
+* `frame_003.png`
+* etc.
+
+NO son imágenes independientes ni diferentes diseños.
+
+Son una **secuencia temporal**. Deben analizarse comparando los cambios entre un frame y el siguiente para entender cómo se genera la animación.
+
+El archivo `76.mp4` es el video original de referencia.
+
+---
+
+## Objetivo
+
+Reconstruir el fondo animado de la referencia dentro de este portfolio.
+
+El objetivo NO es crear simplemente un mesh gradient bonito.
+
+Quiero reproducir lo más fielmente posible:
+
+* movimiento de los campos de color;
+* deformación de las formas;
+* velocidad del movimiento;
+* dirección y comportamiento del flujo;
+* mezcla entre colores;
+* profundidad visual;
+* suavidad de las transiciones;
+* distorsión;
+* grain/noise;
+* cambios de brillo y saturación;
+* comportamiento general de la animación;
+* y sensación de loop.
+
+---
+
+## Análisis obligatorio
+
+Antes de modificar el código:
+
+1. Inspecciona la estructura actual del proyecto.
+2. Abre y analiza todos los frames de `frames/`.
+3. Compáralos entre sí.
+4. Determina qué elementos permanecen estáticos y cuáles cambian.
+5. Intenta inferir qué técnica podría producir ese movimiento.
+
+Presta especial atención a si el movimiento parece producido por:
+
+* interpolación de posiciones;
+* noise;
+* domain warping;
+* fluid simulation;
+* desplazamiento de coordenadas;
+* metaballs;
+* shaders;
+* campos de color;
+* o una combinación de varias técnicas.
+
+No asumas que es un mesh gradient tradicional.
+
+---
+
+## Implementación
+
+La animación debe generarse **en tiempo real**.
+
+NO:
+
+* usar `76.mp4` como background;
+* reproducir el video;
+* mostrar los PNG secuencialmente;
+* hacer crossfade entre imágenes;
+* convertir los frames en una animación de imágenes;
+* crear simplemente varios blobs CSS moviéndose lentamente.
+
+Preferiblemente utiliza WebGL/GLSL, Three.js, React Three Fiber, Canvas o una técnica procedural equivalente que permita reproducir el comportamiento visual de la referencia.
+
+La implementación debe:
+
+* ser fluida;
+* utilizar GPU cuando sea apropiado;
+* ser responsive;
+* funcionar correctamente detrás del contenido existente;
+* tener buen rendimiento;
+* evitar fugas de memoria;
+* soportar pantallas grandes y móviles;
+* respetar `prefers-reduced-motion`.
+
+---
+
+## Integración con el portfolio
+
+NO rediseñes el portfolio.
+
+NO cambies:
+
+* textos;
+* tipografías;
+* layout;
+* navegación;
+* componentes;
+* contenido;
+* secciones;
+* ni estilos que no estén relacionados con el background.
+
+Solo reemplaza el sistema actual de background.
+
+El resultado debe integrarse con el diseño existente sin modificar su estructura.
+
+---
+
+## Calidad visual
+
+La referencia busca una estética:
+
+* premium;
+* cinematográfica;
+* orgánica;
+* sofisticada;
+* suave;
+* profunda;
+* dinámica;
+* cuidadosamente art-directed.
+
+Evita resultados genéricos de "AI gradient", blobs aleatorios o auroras CSS convencionales.
+
+La referencia visual debe ser la fuente principal para decidir el comportamiento.
+
+---
+
+## Procedimiento
+
+Antes de implementar:
+
+1. Analiza los frames.
+2. Explica brevemente qué comportamiento observaste.
+3. Explica qué técnica utilizarás para reproducirlo.
+4. Implementa la solución.
+5. Ejecuta/verifica el proyecto.
+6. Comprueba que el background funciona correctamente en diferentes tamaños de pantalla.
+7. Ajusta la animación si el resultado se aleja visualmente de los frames.
+
+No te limites a explicar cómo hacerlo.
+
+**Realiza la implementación directamente en el proyecto.**
